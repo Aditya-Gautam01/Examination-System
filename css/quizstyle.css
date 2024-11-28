@@ -1,7 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-image: url(pexels-danny-meneses-340146-943096.jpg); 
-    background-size: 1800px 850px;
+    background-color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,26 +14,38 @@ body {
 
 h1{
     font-size: 40px;
-    color: #fff;
+    color: black;
 }
 .card {
-    background-color: #c4bdbd;
-    border: 1px solid #ccc;
+    background-color: #f5a45d;
+    border: 1px solid;
     border-radius: 8px;
-    padding: 20px;
+    padding: 30px;
     margin: 10px;
     display: inline-block;
-    width: 200px;
+    width: 250px;
     transition: transform 0.2s;
 }
 
-.card a {
+.card button{
+    background-color: black;
+    color: #fff;
+    border: none;
+    padding: 15px 32px;
+    margin-top: 20px;
+    font-size: 15px;
+    border-radius: 15px 15px;
+    cursor: pointer;
+}
+
+/* .card a {
     text-decoration: none;
     color: #333;
     font-size: 18px;
-}
+    cursor: pointer;
+} */
 
 .card:hover {
     transform: scale(1.05);
-    cursor: pointer;
+    /* cursor: pointer; */
 }

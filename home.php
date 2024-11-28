@@ -12,7 +12,7 @@
             <h3>ExamPortal</h3>
         </header>
           <h1>Welcome to the <br> Online Examination System</h1>
-          <a href="quiz.php" class="btn">Get Started</a>
+          <a href="quiz.php" class="btn">Start Quiz</a>
     </div>
 
     <div class="middle">

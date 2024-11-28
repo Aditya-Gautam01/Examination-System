@@ -102,8 +102,15 @@ function startQuiz(){
     score = 0;
     nextButton.innerHTML = "Next";
     showQuestion();
+    hideNextQuizButton();
 }
 
+function hideNextQuizButton() {
+    const nextQuizBtn = document.getElementById("next-quiz-btn");
+    if (nextQuizBtn) {
+        nextQuizBtn.style.display = "none"; 
+    }
+}
 function showQuestion(){
     resetState();
     let currentQuestion = questions[currentQuestionIndex];
@@ -146,8 +153,8 @@ function selectAnswer(e){
     });
     nextButton.style.display = "block";
 }
-
-function showScore(){
+function showScore()
+{
       resetState();
       questionElement.innerHTML =` You scored ${score} out of ${questions.length}!<br>`;
       let perc = score*10;
@@ -155,13 +162,29 @@ function showScore(){
         questionElement.innerHTML += `Congratulations. <br>Score = ${perc}%`;
       }
       else if(score>=5){
-        questionElement.innerHTML += `Good Work. <br>Score = ${perc}%`;
+        questionElement.innerHTML +=` Good Work. <br>Score = ${perc}%`;
       }
       else{
-        questionElement.innerHTML += `<br>You can do better. <br> Score = ${perc}% <br>Try Again`;
+        questionElement.innerHTML +=` <br>You can do better. <br> Score = ${perc}% <br>Try Again`;
       }
       nextButton.innerHTML = "Attempt Again";
       nextButton.style.display = "block";
+      createNextQuizButton();
+}
+function createNextQuizButton() {
+    let nextQuizBtn = document.getElementById("next-quiz-btn");
+    
+    if (!nextQuizBtn) {
+        nextQuizBtn = document.createElement("button");
+        nextQuizBtn.id = "next-quiz-btn";
+        nextQuizBtn.innerHTML = "Attempt Next Quiz";
+        nextQuizBtn.onclick = () => {
+            window.location.href = 'html-form_quiz.php';
+        };
+        document.querySelector(".quiz-container").appendChild(nextQuizBtn); 
+    }
+
+    nextQuizBtn.style.display = "block";
 }
 
 function handleNextButton(){
@@ -180,6 +203,5 @@ nextButton.addEventListener("click", ()=>{
         startQuiz();
     }
 });
- 
 
 startQuiz();

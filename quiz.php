@@ -8,18 +8,26 @@
 </head>
 <body>
     <div class="container">
-        <h1>Choose a Subject</h1>
+        <h1>Available Subjects</h1>
         <div class="card">
-            <a href="html_quiz.php">HTML</a>
+            <h2>HTML</h2>
+            <img src="css/bgforhtml.jpg" style="width: 100%;">
+            <a href="htmltopics.php"><button>Start</button></a>
         </div>
         <div class="card">
-            <a href="css_quiz.php">CSS</a>
+            <h2>CSS</h2>
+            <img src="css/bgforcss.jpg" style="width: 100%;">
+            <a href="csstopics.php"><button>Start</button></a>
         </div>
         <div class="card">
-            <a href="python_quiz.php">Python</a>
+            <h2>Python</h2>
+            <img src="css/bgforpython.jpg" style="width: 100%;">
+            <a href="pythontopics.php"><button>Start</button></a>
         </div>
         <div class="card">
-            <a href="cprogramming_quiz.php">c programming</a>
+            <h2>C Programming</h2>
+            <img src="css/bgforc.jpg" style="width: 100%;">
+            <a href="cprgrmtopics.php"><button>Start</button></a>
         </div>
     </div>
 </body>

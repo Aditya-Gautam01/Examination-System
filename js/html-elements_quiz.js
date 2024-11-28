@@ -1,95 +1,97 @@
 const questions = [
     {
-        question: "Who developed Python Programming Language?",
+        question: "Which tag is used to define a paragraph in HTML?",
         answers: [
-            { text: "Wick van Rossum", correct: false},
-            { text: "Rasmus Lerdorf", correct: false},
-            { text: "Guido van Rossum", correct: true},
-            { text: "Niene stom", correct: false},
+            { text: "&lt;p&gt;", correct: true },
+            { text: "&lt;div&gt;", correct: false },
+            { text: "&lt;span&gt;", correct: false },
+            { text: "&lt;section&gt;", correct: false }
         ]
     },
     {
-        question: "Which type of Programming does Python support",
+        question: "Which tag is used to define a line break in HTML?",
         answers: [
-            { text: "object-oriented programming", correct: false},
-            { text: "structured programming", correct: false},
-            { text: "functional programming", correct: false},
-            { text: "all of the above mentioned", correct: true},
+            { text: "&lt;br&gt;", correct: true },
+            { text: "&lt;hr&gt;", correct: false },
+            { text: "&lt;break&gt;", correct: false },
+            { text: "&lt;div&gt;", correct: false }
         ]
     },
     {
-        question: "Is Python case sensitive when dealing with identifiers?",
+        question: "Which tag is used to define a hyperlink in HTML?",
         answers: [
-            { text: "No", correct: false},
-            { text: "Machine dependent", correct: false},
-            { text: "Yes", correct: true},
-            { text: "None of the above mentioned", correct: false},
+            { text: "&lt;a&gt;", correct: true },
+            { text: "&lt;link&gt;", correct: false },
+            { text: "&lt;href&gt;", correct: false },
+            { text: "&lt;url&gt;", correct: false }
         ]
     },
     {
-        question: "Which of the following is correct extension of the Python file?",
+        question: "Which element is used to define an unordered list in HTML?",
         answers: [
-            { text: ".python", correct: false},
-            { text: ".py", correct: true},
-            { text: ".pl", correct: false},
-            { text: ".p", correct: false},
+            { text: "&lt;ul&gt;", correct: true },
+            { text: "&lt;ol&gt;", correct: false },
+            { text: "&lt;li&gt;", correct: false },
+            { text: "&lt;list&gt;", correct: false }
         ]
     },
     {
-        question: "Is Python code is compiled or interpreted?",
+        question: "Which element is used to define a list item in HTML?",
         answers: [
-            { text: "Python code is both compiled or interpreted", correct: true},
-            { text: "Python code is neither compiled nor interpreted", correct: false},
-            { text: "Python code is only compiled", correct: false},
-            { text: "Python code is only interpreted", correct: false},
+            { text: "&lt;li&gt;", correct: true },
+            { text: "&lt;ul&gt;", correct: false },
+            { text: "&lt;ol&gt;", correct: false },
+            { text: "&lt;item&gt;", correct: false }
         ]
     },
     {
-        question: "All keywords in Python are in-",
+        question: "Which tag is used to define a table in HTML?",
         answers: [
-            { text: "Capitalized", correct: false},
-            { text: "lower case", correct: false},
-            { text: "UPPER CASE", correct: false},
-            { text: "None of the above mentioned", correct: true},
-        ] 
-    },
-    {
-        question: 'What will be the value of the following Python expression <br> 4 + 3 % 5',
-        answers: [
-            { text: "7", correct: true},
-            { text: "2", correct: false},
-            { text: "4", correct: false},
-            { text: "1", correct: false},
+            { text: "&lt;table&gt;", correct: true },
+            { text: "&lt;td&gt;", correct: false },
+            { text: "&lt;tr&gt;", correct: false },
+            { text: "&lt;thead&gt;", correct: false }
         ]
     },
     {
-        question: "Which of the following is used to define a block of code in Python language?",
+        question: "Which tag is used to define a table row in HTML?",
         answers: [
-            { text: "Brackets", correct: false},
-            { text: "Key", correct: false},
-            { text: "Indentation", correct: true},
-            { text: "All of the above mentioned", correct: false},
+            { text: "&lt;tr&gt;", correct: true },
+            { text: "&lt;th&gt;", correct: false },
+            { text: "&lt;td&gt;", correct: false },
+            { text: "&lt;table&gt;", correct: false }
         ]
     },
     {
-        question: "Which keyword is used for function in Python language",
+        question: "Which tag is used to define an image in HTML?",
         answers: [
-            { text: "function", correct: false},
-            { text: "def", correct: true},
-            { text: "fun", correct: false},
-            { text: "define", correct: false},
+            { text: "&lt;img&gt;", correct: true },
+            { text: "&lt;picture&gt;", correct: false },
+            { text: "&lt;image&gt;", correct: false },
+            { text: "&lt;src&gt;", correct: false }
         ]
     },
     {
-        question: 'What will be the output of the following Python code?<br><pre>num1 = 5\nnum2 = 10\nresult = num1 + num2\nprint(result)</pre>',
+        question: "Which tag is used to define the header section of a document in HTML?",
         answers: [
-            { text: "15", correct: true },
-            { text: "5", correct: false },
-            { text: "10", correct: false },
-            { text: "None of these", correct: false },
+            { text: "&lt;header&gt;", correct: true },
+            { text: "&lt;head&gt;", correct: false },
+            { text: "&lt;nav&gt;", correct: false },
+            { text: "&lt;section&gt;", correct: false }
         ]
-    }    
+    },
+    {
+        question: "Which tag is used to define a block of text as a quotation in HTML?",
+        answers: [
+            { text: "&lt;blockquote&gt;", correct: true },
+            { text: "&lt;q&gt;", correct: false },
+            { text: "&lt;quote&gt;", correct: false },
+            { text: "&lt;citation&gt;", correct: false }
+        ]
+    }
 ];
+
+
 const questionElement = document.getElementById("question");
 const answerButtons = document.getElementById("answer-buttons");
 const nextButton = document.getElementById("next-btn");
@@ -146,7 +148,6 @@ function selectAnswer(e){
     });
     nextButton.style.display = "block";
 }
-
 function showScore()
 {
       resetState();
